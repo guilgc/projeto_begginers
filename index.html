@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <title>Cadastro de Produtos</title>
+</head>
+<body>
+    
+<header>
+    <div id="img">
+        <img src="https://www.flaticon.com/svg/static/icons/svg/2972/2972124.svg" alt="Icone-maquina de costura" width="7%">
+    </div>
+    
+    <nav id="link">
+       
+        <a href="">Cadastro</a>
+     
+        <a href="consulta.html">Consulta</a>
+    </nav>
+</header>
+
+<section>
+    <div id="titulo">
+        <h1>
+            Cadastre Um Novo Produto
+        </h1>
+    </div>
+
+    <div id="meio">
+        <img class="foto1" src="https://www.flaticon.com/svg/static/icons/svg/891/891054.svg" alt="agulha de costura">
+
+        <div id="form">
+            <div class="formulario" id="nomeseta">
+                <label for="produto" class="nome">Nome do Produto:</label>
+                <input type="text" required placeholder="Digite o nome do produto..." id="nome" class="nome">
+            </div>
+            <div class="formulario" id="tiposeta">
+              <label for="tipo" class="tipo">Tipo do Produto:</label>
+             <select name="tipos" id="tipo" class="tipo" form="tipos">
+             <option value="tipovazio" disabled selected>Escolha o tipo do produto</option>
+             <option value="Camisa">Camisa</option>
+             <option value="Camiseta">Camiseta</option>
+             <option value="Calça">Calça</option>
+             <option value="Bermuda">Bermuda</option>
+             <option value="Calçado">Calçado</option>
+             </select>
+            </div>
+
+            <div>
+                <label for="estado" class="estado">Estado de Conservação:</label>
+                <select name="estado" id="estado" class="estado" form="tipos">
+                <option value="estadovazio" disabled selected>Escolha o estado de conservação</option>
+                <option value="Novo">Novo</option>
+                <option value="Semi-Novo">Semi-Novo</option>
+                <option value="Usado">Usado</option>
+                </select>
+
+            </div>
+
+            <div class="formulario">
+                <label for="numero">Número de Série do Produto:</label>
+                <input type="text" required placeholder="000.000" 
+                    id="numero" class="numero" oninput="ponto()" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="7">
+            </div>
+    
+    
+           <div class="formulario" id="caracteristicaseta">
+            <label for="caracteristica">Outras Características do Produto:</label>
+            <textarea name="Caracteristicas" required id="caracteristica" cols="40" rows="10"></textarea>
+           </div> 
+    
+           <div class="formulario">
+               <button id="botao" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="addDados()">CADASTRAR</button>
+           </div>
+    
+        </div>
+        <img class="foto2" src="https://www.flaticon.com/svg/static/icons/svg/891/891054.svg" alt="agulha de costura">
+
+    </div>
+
+</section>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+    </style>
+    <script src="main.js"></script>
+</body>
+</html>
