@@ -64,7 +64,7 @@
             <div class="formulario">
                 <label for="numero">Número de Série do Produto:</label>
                 <input type="text" required placeholder="000.000" 
-                    id="numero" class="numero" oninput="ponto()" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="7">
+                    id="numero" class="numero" oninput="ponto()" onkeypress="isNumberKey(event)" maxlength="7">
             </div>
     
     

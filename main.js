@@ -34,3 +34,10 @@ function ponto(){
   }
 }
 
+function isNumberKey(event) {
+  if (event.keyCode >= 48 && event.keyCode <= 57) {
+      return true;
+  } else {
+      event.preventDefault();
+  }
+}
